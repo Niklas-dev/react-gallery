@@ -6,10 +6,9 @@ import { useEffect, useRef } from "react";
 export default function Home() {
   const gallery = useRef<HTMLDivElement>(null);
   const elementRefs = useRef([]);
+
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
-      const target = e.currentTarget as HTMLDivElement;
-      console.log(target!.dataset.id);
       const mouseX = e.clientX,
         mouseY = e.clientY;
       const xDecimal = mouseX / window.innerWidth,
